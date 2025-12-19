@@ -4,8 +4,9 @@ services:
     runtime: node
     region: oregon
     plan: free
-    buildCommand: cd hotel-frontend && npm install && npm run build
-    staticPublishPath: ./hotel-frontend/dist
+    rootDir: hotel-frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
     routes:
       - type: rewrite
         source: /*
